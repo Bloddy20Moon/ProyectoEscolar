@@ -44,7 +44,7 @@
         }
     } else {
         // Si la ruta no está permitida, mostrar un mensaje de error o redireccionar a una página de error
-        echo "Ruta no válida";
+        echo "";
     }
 }
 
