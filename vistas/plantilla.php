@@ -30,7 +30,6 @@
     include "modulos/header.php";
     
 
-    include "modulos/footer.php";
 
     if(isset($_GET["ruta"])) {
     $rutasPermitidas = array("aulas", "estudiante", "docente", "calificaciones", "materias", "horarios", "supervisar");
