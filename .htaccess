@@ -1,0 +1,15 @@
+# Impedir listados
+Options All -Indexes
+
+# Url Amigables
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9ñÑ_/]+)$ index.php?ruta=$1
+
+# Nueva regla para la ruta corta de supervisar
+RewriteRule ^supervisar/([a-zA-Z0-9_-]+)$ index.php?ruta=supervisar/$1 [NC,L]
+
+# Nueva regla para la ruta corta de extras
+RewriteRule ^extras/([a-zA-Z0-9_-]+)$ index.php?ruta=extras/$1 [NC,L]
+
+# Nueva regla para la ruta corta de herramientas
+RewriteRule ^herramientas/([a-zA-Z0-9_-]+)$ index.php?ruta=herramientas/$1 [NC,L]
