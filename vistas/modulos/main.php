@@ -4,7 +4,7 @@
             <div id="main-menu" class="main-menu collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li class="active">
-                        <a href="index.php"><i class="menu-icon fa fa-laptop"></i>INICIO</a>
+                        <a href="inicio"><i class="menu-icon fa fa-laptop"></i>INICIO</a>
                     </li>
                     <li class="menu-title">MENU</li>
                     <!-- /.menu-title -->

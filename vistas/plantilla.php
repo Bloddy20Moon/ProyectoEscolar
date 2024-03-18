@@ -2,9 +2,10 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" href="https://i.imgur.com/QRAUqs9.png">
-    <link rel="shortcut icon" href="https://i.imgur.com/QRAUqs9.png">
+    <link rel="apple-touch-icon" href="vistas\modulos\img\plantilla\logo.png">
+    <link rel="shortcut icon" href="vistas\modulos\img\plantilla\senati.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
@@ -23,7 +24,10 @@
 <body>
     <?php
 
+    if(isset($_SESSION["ValidarSesion"]) && $_SESSION["ValidarSesion"] === "ok"){
+
     include "modulos/main.php";
+    
     
     echo'<div id="right-panel" class="right-panel">';
 
@@ -32,7 +36,7 @@
 
 
     if(isset($_GET["ruta"])) {
-    $rutasPermitidas = array("aulas", "estudiante", "docente", "calificaciones", "materias", "horarios", "supervisar");
+    $rutasPermitidas = array("aulas", "inicio", "estudiante", "docente", "calificaciones", "materias", "horarios", "supervisar");
     
     if(in_array($_GET["ruta"], $rutasPermitidas)) {
         if ($_GET["ruta"] === "supervisar") {
@@ -46,17 +50,22 @@
         // Si la ruta no está permitida, mostrar un mensaje de error o redireccionar a una página de error
         echo "";
     }
-}
-
     
-
-   
-    
+    }
 
     include "modulos/footer.php";
 
     echo "</div>";
+    
+}
+    else{
+        include "modulos/login.php";
+    }
+
+    
     ?>
+
+    
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@2.2.4/dist/jquery.min.js"></script>
