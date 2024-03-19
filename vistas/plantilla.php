@@ -57,7 +57,9 @@
 
     echo "</div>";
     
+   //FIN DEL IFFF 
 }
+   //comienzo del else
     else{
         include "modulos/login.php";
     }
